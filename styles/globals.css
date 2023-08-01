@@ -1,0 +1,154 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html,
+body {
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  box-sizing: border-box;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+
+.profileScreen{
+  height: 100vh;
+  color: #fff;
+}
+
+.profileScreen_body{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 4%;
+  max-width: 800px;
+}
+
+.profileScreen_info{
+  display: flex;
+
+}
+.profileScreen_info_image{
+  height: 100px;
+
+}
+
+#profileScreen_body_heading{
+  font-size: 60px;
+  font-weight: 400;
+  border-bottom: 1px solid #282c2d;
+  margin-bottom: 20px;
+}
+
+.profileScreen_details_heading{
+  border: 2px solid white;
+  width: 41vw;
+  background-color: gray;
+  padding: 15px;
+  font-size: 15px;
+  /* padding: 10px 20px; */
+  margin-left:20px;
+  display: flex;
+  justify-content: space-between;
+}
+.profileScreen_edit{
+    width: 41vw;
+  
+    margin-left:20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    /* margin-top: 2%; */
+    color: #fff;
+    background-color: #543ae7;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 2px;
+  }
+
+.profileScreen_signOut{
+  width: 41vw;
+
+  margin-left:20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  /* margin-top: 2%; */
+  color: #fff;
+  background-color: #e50914;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+.profileScreen_plans-heading{
+  border-bottom: 1px solid #282c2d;
+  margin-left: 20px;
+  font-size: 1.7rem;
+  font-weight: 300;
+
+}
+
+
+
+
+.slick-dots{
+  display: flex !important;
+  gap:130px !important;
+  justify-content: center !important;
+  margin-right: 30px !important;
+} 
+
+
+
+.slick-prev{
+  margin-left: 100px;
+  z-index: 40;
+}
+.slick-next{
+  margin-right: 100px;
+  margin-bottom: 10px!important;
+  top: 48%!important;
+  display: none;
+}
+
+.slick-arrow{
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .slick-next{
+    display: none;
+    height: 1px !important;
+    width: 1px !important;
+    font: 10px;
+  }
+  .slick-prev{
+    display: hidden;
+  }
+}
+
+.inputStyle {
+  width: 50% !important;
+  height: 45px;
+  border-radius: 7px;
+  border: 0px;
+  margin-left: 8px;
+  margin-right: 8px;
+  background: #dddddd;
+  font-size: 20px;
+}
