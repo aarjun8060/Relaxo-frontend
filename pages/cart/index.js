@@ -14,7 +14,7 @@ import { toast, ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 import { getUser } from '../../src/redux/slice/auth'
 
-function index() {
+function Index() {
   let i=1;
   const router = useRouter();
    //useState setup
@@ -142,7 +142,7 @@ function index() {
                                                 </div>
                                             ) : (
           carts && carts.map((data,index) => (
-              <div className='flex flex-col border w-[770px] h-[350px] mt-[10px] mb-[30px]'>
+              <div key={index} className='flex flex-col border w-[770px] h-[350px] mt-[10px] mb-[30px]'>
               <div className='w-[100%] h-[75px]  text-xl font-semibold text-[#666666] bg-[#EDEBEC] flex items-center px-[24px] py-[15px]'><h1>Item({carts.length > i ? [i++]:carts.length})</h1></div>
               <div className='flex h-max mb-[0px] justify-between ml-[30px] w-[70%] border-black mt-[10px]'>
               <div>
@@ -238,4 +238,4 @@ function index() {
   )
 }
 
-export default index
+export default Index

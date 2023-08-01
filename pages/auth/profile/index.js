@@ -22,7 +22,7 @@ import { getOrder, orderDelete, orderList } from '../../../src/redux/slice/Order
 import Stack from '@mui/material/Stack';
 
 
-function profile() {
+function Profile() {
     const router = useRouter();
     const[value,setValue] = useState('1');
     const [update,setUpdate] = useState(false);
@@ -162,8 +162,8 @@ function profile() {
                                             ) : (
 
                                             orders && orders.map((item) => (
-                                                item.products.map((data)=> (
-                                                <div className='flex justify-between w-[100%]'>
+                                                item.products.map((data,index)=> (
+                                                <div key={index} className='flex justify-between w-[100%]'>
                                     <div className='flex md:flex-row flex-col h-auto  justify-around  md:w-[60%]  border-black mt-[40px]'>
                                     <div className='border md:w-[180px] w-[100px] md:h-[140px] h-[100px] '>
                                         <img src ={data && data.productId && data.productId.image} className='md:w-[180px] w-[100px] md:h-[140px] h-[100px]' />
@@ -314,4 +314,4 @@ function profile() {
   )
 }
 
-export default profile
+export default Profile

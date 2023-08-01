@@ -8,7 +8,7 @@ import { useSelector } from 'react-redux';
 
 
 
-function index() {
+function Index() {
     const router = useRouter();
     const [details,setDetails] = useState()
     const {orders} = useSelector((state)=> state.order) 
@@ -88,4 +88,4 @@ function index() {
   )
 }
 
-export default index
+export default Index

@@ -30,7 +30,6 @@ const ForgotPasswordPage = () => {
       let data = {"email":email};
       const res = await dispatch(setPasswordOtpUser(data))
       if(res){
-       
         setStep(2);
         return true
       }else{
@@ -143,7 +142,7 @@ const ForgotPasswordPage = () => {
             />
           </div>
           <div className='w-full flex text-blue-800 md:flex-row flex-col gap-1  text-[12px] '>
-            <p className="p3">Didn't receive the code?</p>
+            <p className="">Didnt receive the code?</p>
             <p className="underline">Resend</p>
           </div>
           <button

@@ -21,7 +21,7 @@ import axios from 'axios';
 
 
 
-function index() {
+function Index() {
     const router = useRouter();
    // for item count in map function
     let i =1;
@@ -439,8 +439,8 @@ const handlePay = async () =>{
               <AccordionDetails >
               <div className=' border'>
                 {
-                   carts && carts.map((data) => (
-                     <div className='h-[250px]'>
+                   carts && carts.map((data,index) => (
+                     <div className='h-[250px]' key={index}>
                         <div className='ml-[30px] mt-[10px] '>Item({carts.length > i ? [i++]:carts.length})</div>
                         <div className='flex justify-start  mt-[30px] ml-[30px] gap-[40px]'>
                             <div>
@@ -524,8 +524,8 @@ const handlePay = async () =>{
                     </div>
                 </div>
                 {
-                    carts && carts.map((data) => (
-                        <div className='flex justify-around mt-[17px]'>
+                    carts && carts.map((data,index) => (
+                        <div key={index} className='flex justify-around mt-[17px]'>
                             <div>
                                 <img src={data && data.products && data.products.length>0 && data.products[0].productId && data.products[0].productId.image} className='ml-[10px] w-[80px] h-[80px] border' alt=''/>
                             </div>
@@ -575,4 +575,4 @@ const handlePay = async () =>{
   )
 }
 
-export default index
+export default Index

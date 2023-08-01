@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { orderList } from '../../../src/redux/slice/Order'
 import { useRouter } from 'next/router'
 
-function index() {
+function Index() {
     // use Router
     const router = useRouter();
     // redux setup
@@ -39,8 +39,8 @@ function index() {
        </div>
        <div className='p-10'> 
        {
-                orders.map((data)=> (
-                    <div className='flex flex-col border w-[770px] h-[300px] mt-[10px] '>                                                 
+                orders.map((data,index)=> (
+                    <div key={index} className='flex flex-col border w-[770px] h-[300px] mt-[10px] '>                                                 
                                
                                
                                <div className='flex justify-between w-[100%]'>
@@ -89,4 +89,4 @@ function index() {
   )
 }
 
-export default index
+export default Index

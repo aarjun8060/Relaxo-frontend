@@ -1,9 +1,8 @@
-import React from 'react'
 import ErrorIcon from '@mui/icons-material/Error';
 import { useRouter } from 'next/router';
 
 
-function index() {
+function Fail() {
   const router = useRouter();
   return (
     <div className='mt-[50px]  h-[100vh] flex justify-center items-center border'>
@@ -18,4 +17,4 @@ function index() {
   )
 }
 
-export default index
+export default Fail

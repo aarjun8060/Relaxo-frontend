@@ -43,7 +43,7 @@ const validationSchema = Yup.object({
     // .matches(/[A-Z]/, 'Password requires an uppercase letter')
     // .matches(/[^\w]/, 'Password requires a symbol').required('Required'),
 })
-function index(){
+function Index(){
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const router = useRouter();
     const dispatch = useDispatch();
@@ -126,4 +126,4 @@ function index(){
 
     )
 }
-export default index;
+export default Index;
