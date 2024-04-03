@@ -16,15 +16,15 @@ jobs:
       - name: Build Docker Image
         run: sudo docker build -t aarjun8060/relaxo_frontend .
       - name: Publish image to docker hub
-        run: docker push aarjun8060/relaxo_frontend
+        run: sudo docker push aarjun8060/relaxo_frontend
 
   deploy: 
     needs: build
     runs-on: aws-ec2    
     steps:
       - name: Pull image from docker hub
-        run: docker pull reactjs-app:latest 
+        run: sudo docker pull reactjs-app:latest 
       - name: Delete Old Container
-        run: docker rm -f reactContainer
+        run: sudo docker rm -f reactContainer
       - name: Run docker container
-        run: docker run -d -p 3000:80 --name reactContainer aarjun8060/relaxo_frontend   
+        run: sudo docker run -d -p 3000:80 --name reactContainer aarjun8060/relaxo_frontend   
