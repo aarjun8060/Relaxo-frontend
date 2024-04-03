@@ -12,7 +12,7 @@ jobs:
       - name: Checkout Source
         uses: actions/checkout@v3
       - name: Login to Docker Hub
-        run: docker login -u arjunsingh0528159@gmail.com -p Samarpal08@
+        run: sudo docker login -u arjunsingh0528159@gmail.com -p Samarpal08@
       - name: Build Docker Image
         run: docker build -t aarjun8060/relaxo_frontend .
       - name: Publish image to docker hub
