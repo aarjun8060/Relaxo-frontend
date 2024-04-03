@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - d
-      master
+      eploy-to-ec2
 
 jobs:
   build:
