@@ -14,9 +14,9 @@ jobs:
       - name: Login to Docker Hub
         run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
       - name: Build Docker Image
-        run: docker build -t reactjs-app .
+        run: docker build -t aarjun8060/relaxo_frontend .
       - name: Publish image to docker hub
-        run: docker push reactjs-app:latest   
+        run: docker push aarjun8060/relaxo_frontend:latest   
 
   deploy: 
     needs: build
@@ -27,4 +27,4 @@ jobs:
       - name: Delete Old Container
         run: docker rm -f reactContainer
       - name: Run docker container
-        run: docker run -d -p 3000:80 --name reactContainer reactjs-app   
+        run: docker run -d -p 3000:80 --name reactContainer aarjun8060/relaxo_frontend   
